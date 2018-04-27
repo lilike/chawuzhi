@@ -14,7 +14,7 @@ import com.chawuzhi.admin.inter.TbContentService;
 @SpringBootTest(classes=Application.class)
 public class TestDataSource {
 
-	@Reference(version = "1.0.0")
+	//@Reference(version = "1.0.0")
 	@Autowired
 	private TbContentService service;
 	

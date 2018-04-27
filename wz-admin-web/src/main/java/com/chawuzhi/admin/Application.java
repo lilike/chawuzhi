@@ -23,7 +23,7 @@ public class Application {
     @Bean  
     public TomcatEmbeddedServletContainerFactory servletContainer(){  
         TomcatEmbeddedServletContainerFactory container = new TomcatEmbeddedServletContainerFactory();  
-        container.setPort(8089);  
+        container.setPort(8090);  
         return container;  
     }  
 }
