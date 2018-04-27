@@ -1,6 +1,5 @@
 package com.chawuzhi.admin.pojo;
 
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

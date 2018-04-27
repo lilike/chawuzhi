@@ -14,11 +14,11 @@ import com.chawuzhi.admin.pojo.TbContent;
 @RestController
 public class TbContentController {
 
+	// 引用Dubbo
 	@Reference(version = "1.0.0")
 	private TbContentService tbContentService;
 	
 	@RequestMapping("/hello")
-	@ResponseBody
 	public  List<TbContent> list() {
 		List<TbContent> findAll = tbContentService.findAll();
 		return findAll;

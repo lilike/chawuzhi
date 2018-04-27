@@ -1,6 +1,5 @@
 package com.chawuzhi.admin.pojo;
 
-
 import java.util.Date;
 
 import com.chawuzhi.admin.base.BaseDomain;
