@@ -1,3 +1,4 @@
+
 # 使用SpringBoot框架重构差无知商城
 
 ## wz-admin模块
@@ -10,3 +11,4 @@
 
 ## 2018-05-03
 1. 增加了SpringBoot整合Redis
+2. 增加了SpringBoot整合ActiveMq
