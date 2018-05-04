@@ -3,6 +3,7 @@ package com.chawuzhi.admin.controller;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,10 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class TbContentController {
 
+	
+	@Value(value="${spring.mvc.view.prefix}")
+	private String hello;
+	
 	// 引用Dubbo
 	@Reference(version = "1.0.0")
 	private TbContentService tbContentService;
@@ -35,7 +40,7 @@ public class TbContentController {
 	
 	@RequestMapping("/good")
 	public ModelAndView list1(HttpServletRequest request,HttpServletResponse response) {
-		
+		System.out.println(hello);
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("good", "say Hi");
 		mv.setViewName("/hello");

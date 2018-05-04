@@ -12,3 +12,6 @@
 ## 2018-05-03
 1. 增加了SpringBoot整合Redis
 2. 增加了SpringBoot整合ActiveMq
+
+## 2018-05-04
+1. 增加了Spring-mail
