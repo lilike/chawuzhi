@@ -1,5 +1,5 @@
 
-# 使用SpringBoot框架重构差无知商城
+# 使用SpringBoot框架刻意练习
 
 ## wz-admin模块
 1. 2018-04-25 搭建SpringBoot整合mybatis框架
@@ -15,3 +15,6 @@
 
 ## 2018-05-04
 1. 增加了Spring-mail
+
+## 2018-07-03
+1. 增加了Apache Curator实现分布式锁

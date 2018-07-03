@@ -28,7 +28,7 @@ public class TbContentController {
 	private String hello;
 	
 	// 引用Dubbo
-	@Reference(version = "1.0.0")
+	@Reference(version = "1.0.0",timeout=115000)
 	private TbContentService tbContentService;
 	
 	@RequestMapping("/hello")

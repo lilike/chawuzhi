@@ -1,5 +1,7 @@
 package com.chawuzhi.test;
 
+import java.util.concurrent.CountDownLatch;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,44 @@ public class TestDataSource {
 	public void test001() throws Exception {
 		System.out.println(service.findAll());
 	
+	}
+	
+	
+	public static void main(String[] args) throws Exception {
+		
+		 final CountDownLatch latch = new CountDownLatch(1);
+		
+		Thread t1 = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				boolean flag = false;
+				while (true) {
+					System.out.println("开启循环");
+					try {
+						if (!flag) {
+							latch.await();
+							System.out.println("flag改变了吗");
+							flag = true;
+						}else {
+							System.out.println("出去了");
+							break;
+						}
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					
+				}
+				
+			}
+		});
+		t1.start();
+		
+		System.out.println("我是主线程");
+		
+		Thread.sleep(5000);
+		System.out.println("主线程OK");
+		latch.countDown();
+		
 	}
 	
 	

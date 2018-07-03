@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chawuzhi.admin.mapper.TbProductMapper">
+  
+	<update id="displayReduceCount" parameterType="map">
+		 update tb_product set product_count = product_count - ${productCount} where product_name = '${productName}'
+	</update>  
+  
+  	<select id="getProductCount" resultType="java.lang.Integer" parameterType="map">
+  		select product_count from tb_product where product_name = '${productName}'
+  	</select>
+  
+</mapper>
