@@ -18,3 +18,6 @@
 
 ## 2018-07-03
 1. 增加了Apache Curator实现分布式锁
+
+## 2018-07-16
+1. 增加了Spring事务管理机制,包含Spring-data和Spring-jms事务管理
