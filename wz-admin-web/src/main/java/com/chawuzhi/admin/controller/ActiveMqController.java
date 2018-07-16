@@ -30,7 +30,7 @@ public class ActiveMqController {
 	@ResponseBody
 	public String sendMessage(@RequestParam(required=false)String message) {
 		// destination 是发送的目的地
-		jmsTemplate.convertAndSend("hello", message);
+		jmsTemplate.convertAndSend("out.queue", message);
 		return message;
 	}
 	
