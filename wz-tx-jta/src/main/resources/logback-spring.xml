@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true">
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+<!-- The FILE and ASYNC appenders are here as examples for a production configuration -->
+
+
+    <logger name="com.lyric.demo" level="DEBUG"/>
+
+    <logger name="com.atomikos" level="INFO"/>
+    <logger name="org.springframework.transaction" level="INFO"/>
+    <logger name="org.springframework.jms" level="DEBUG"/>
+    <logger name="org.springframework.jdbc" level="DEBUG"/>
+    <logger name="org.springframework.orm.jpa" level="DEBUG"/>
+    <logger name="javax.transaction" level="INFO"/>
+    <logger name="javax.jms" level="DEBUG"/>
+    <logger name="org.hibernate.jpa" level="DEBUG"/>
+    <logger name="org.hibernate.SQL" level="DEBUG"/>
+
+    <logger name="org.apache.activemq" level="DEBUG"/>
+
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>

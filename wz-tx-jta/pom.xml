@@ -1,17 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
+		<parent>
 		<groupId>com.chawuzhi</groupId>
 		<artifactId>wz-parent</artifactId>
 		<version>1.0.0-RELEASE</version>
 	</parent>
-	<groupId>com.lyric</groupId>
-	<artifactId>wz-tx-spring-data</artifactId>
+	<groupId>com.lilike</groupId>
+	<artifactId>wz-tx-jta</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
-
-
 	<dependencies>
 
 		<dependency>
@@ -24,6 +21,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jta-atomikos</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -31,9 +37,10 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- springboot 整合 activemq -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<artifactId>spring-boot-starter-activemq</artifactId>
 		</dependency>
 
 		<!-- 阿里巴巴连接池 -->
@@ -41,14 +48,6 @@
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
 		</dependency>
-
-
-		<!-- springboot 整合 activemq -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-activemq</artifactId>
-		</dependency>
-
 
 	</dependencies>
 
@@ -70,8 +69,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
 
 
 
