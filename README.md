@@ -21,3 +21,6 @@
 
 ## 2018-07-16
 1. 增加了Spring事务管理机制,包含Spring-data和Spring-jms事务管理
+
+## 2018-07-23
+1. 增加了Spring-jta事务管理
